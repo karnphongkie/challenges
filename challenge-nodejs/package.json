@@ -4,7 +4,9 @@
   "description": "Welcome to the Pomelo NodeJS challenge!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "lab -v **/*.test.js -t 90"
   },
   "author": "",
   "license": "ISC",
