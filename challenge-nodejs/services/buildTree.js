@@ -1,7 +1,3 @@
-const addChild = (parentNode, childNode) => {
-  parentNode.children.push(childNode);
-};
-
 const createNode = (nodeData) => {
   const node = {};
 
@@ -10,8 +6,6 @@ const createNode = (nodeData) => {
   node.level = nodeData.level;
   node.children = [];
   node.parent_id = nodeData.parent_id;
-
-  node.addChild = addChild;
 
   return node;
 };

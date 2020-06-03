@@ -6,9 +6,6 @@ const buildTree = (treeData) => {
   try {
     Object.values(treeData).forEach((nodeLevel) => {
       nodeLevel.forEach((nodeData) => {
-        if (typeof nodeData !== 'object') {
-          throw Error('nodeData is not object');
-        }
         if (!('parent_id' in nodeData)) {
           throw Error(
             'nodeData is require parent id expected value is number of null'
@@ -23,7 +20,7 @@ const buildTree = (treeData) => {
         } else {
           const parentNode = nodeMap[node.parent_id];
           if (!parentNode) {
-            throw Error('Can not find expected parent node');
+            throw Error('Cannot find expected parent node');
           }
           parentNode.children.push(node);
         }
