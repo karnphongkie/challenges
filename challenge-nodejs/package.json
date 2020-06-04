@@ -8,6 +8,11 @@
     "dev": "nodemon index.js",
     "test": "lab -v **/*.test.js -t 90"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -24,6 +29,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
     "prettier": "^2.0.5"
   },
   "engines": {
